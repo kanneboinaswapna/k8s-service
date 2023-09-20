@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: rs-sample
+ labels:
+   app: nginx
+spec:
+  minReadySeconds: 5
+  replicas: 4
+  selector:
+    matchlabels:
+      app: nginx
+      version: 1.23
+  template:
+    metadata:
+      labels:
+        app: nginx
+        version: 1.23
+    spec:
+      containers:
+         - name: rs-container
+         - image: nginx
+           Ports:
+             containerPort: 80
+             protocol: TCP
+
+
+      
