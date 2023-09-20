@@ -22,8 +22,8 @@ spec:
          - name: rs-container
          - image: nginx
            Ports:
-             containerPort: 80
-             protocol: TCP
+             - containerPort: 80
+               protocol: TCP
 
 
       
