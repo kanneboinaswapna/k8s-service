@@ -9,7 +9,7 @@ spec:
   minReadySeconds: 5
   replicas: 4
   selector:
-    matchlabels:
+    matchLabels:
       app: nginx
       version: 1.23
   template:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
          - name: rs-container
-         - image: nginx
+           image: nginx
            Ports:
              - containerPort: 80
                protocol: TCP
