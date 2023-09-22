@@ -14,9 +14,9 @@ spec:
         - 1d
       volumeMounts:
         - name: username-vol
-          mountpath: /creds/username
+          mountPath: /creds/username
         - name: password-vol
-          mountpath: /creds/password
+          mountPath: /creds/password
   volumes: 
     - name: username-vol
       configMap: 
