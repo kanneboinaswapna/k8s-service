@@ -4,24 +4,24 @@ kind: ReplicaSet
 metadata:
  name: rs-sample
  labels:
-   app: nginx
+   purpose: nginx
 spec:
   minReadySeconds: 5
   replicas: 4
   selector:
     matchLabels:
       app: nginx
-      version: 1.23
+      release: v1.1
   template:
     metadata:
       labels:
         app: nginx
-        version: 1.23
+        release: v1.1
     spec:
       containers:
          - name: rs-container
            image: nginx
-           Ports:
+           ports:
              - containerPort: 80
                protocol: TCP
 
