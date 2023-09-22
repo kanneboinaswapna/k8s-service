@@ -9,11 +9,12 @@ spec:
   containers:
     - name: exp
       image: alpine
-      args:
+      command:
         - sleep
         - 1d
       envFrom:
-        - configMapRef: cm-sample
-      secretRef: 
-        - name: cm-secret
+        - configMapRef:
+           name: cm-sample
+        - secretRef: 
+           name: cm-secret
 
